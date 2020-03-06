@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnaSayfa.AnaSayfa">
+
+    <LinearLayout
+        android:id="@+id/hava"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_gravity="left"
+            android:layout_width="200dp"
+            android:layout_height="200dp">
+            <TextView
+                android:layout_margin="15dp"
+                android:id="@+id/sehir_adi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elazığ"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 C"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/sehir_adi"
+                android:textSize="50dp"
+                android:id="@+id/derece"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/durum"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Güneşli"
+                android:textSize="20dp"
+                android:layout_below="@+id/derece"
+                android:layout_margin="10dp"/>
+
+
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ani"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/parcalibulutlu"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            android:layout_below="@+id/sehir_adi"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hava"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/sicaklik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sıcaklık"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/hissedilen"
+                    android:layout_below="@+id/sicaklik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hissedilen"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/min_sicaklik"
+                    android:layout_below="@+id/hissedilen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Min Sıcaklık"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/max_sicaklik"
+                    android:layout_below="@+id/min_sicaklik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Max Sıcaklık"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/basinc"
+                    android:layout_below="@+id/max_sicaklik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Basıç"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/nem"
+                    android:layout_below="@+id/basinc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nem"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/ruzgar"
+                    android:layout_below="@+id/nem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rüzgar"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/deniz_seviyesi"
+                    android:layout_below="@+id/ruzgar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deniz Seviyesi"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/sicaklikD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="23 C"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/hissedilenD"
+                    android:layout_below="@+id/sicaklikD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25 C"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/min_sicaklikD"
+                    android:layout_below="@+id/hissedilenD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 C"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/max_sicaklikD"
+                    android:layout_below="@+id/min_sicaklikD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="26 C"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/basincD"
+                    android:layout_below="@+id/max_sicaklikD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/nemD"
+                    android:layout_below="@+id/basincD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/ruzgarD"
+                    android:layout_below="@+id/nemD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="16"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/deniz_seviyesiD"
+                    android:layout_below="@+id/ruzgarD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1001"
+                    android:textSize="25dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

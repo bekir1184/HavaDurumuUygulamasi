@@ -6,70 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
+    <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Sehir adı giriniz"
-        android:gravity="center"
-        android:id="@+id/sehirAdi"/>
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        app:lottie_rawRes="@raw/anaekran"/>
 
-
-    <LinearLayout
-        android:id="@+id/lin"
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sehirAdi"
-        android:orientation="horizontal"
+        android:layout_height="400dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+
         >
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/resim"
-            android:src="@mipmap/ic_launcher"
-            android:layout_margin="20dp"/>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
             <TextView
-                android:id="@+id/baslikSehirAdi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="40dp"
-                android:text="Tokat"
-                android:layout_gravity="center"
-                android:layout_margin="15dp"
-                />
-
-            <TextView
-                android:id="@+id/derece"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_margin="20dp"
+                android:text="Bulunduğunuz şehri giriniz"/>
+            <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="40dp"
-                android:text="4"
-                android:layout_gravity="center"
-                android:layout_margin="15dp"
-                />
+                android:layout_margin="20dp"
+                android:id="@+id/material"
+                android:layout_centerInParent="true"
+                app:mtf_labelColor="@android:color/white"
+                app:mtf_image="@drawable/ic_add_location_black_24dp"
+                >
 
-        </LinearLayout>
-
-
-
-
-
-
-
-    </LinearLayout>
-
+                <EditText
+                    android:id="@+id/gelenSehir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Şehir giriniz"
+                    android:textColor="#333"
+                    android:textSize="25sp" />
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lin"
-        android:text="sehir getir"/>
+
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/material"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ileri"
+                android:text="İleri"
+                android:id="@+id/ileri"
+                android:textAllCaps="false"/>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
 
 
 </RelativeLayout>
